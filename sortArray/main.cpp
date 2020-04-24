@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <chrono>
 #include "utils.h"
-
 using namespace std;
 
 void myEndProg()
