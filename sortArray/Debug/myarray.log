@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\_Edu\Информатика\Лабы\myarray\main.cpp(34,15): warning C4244: инициализация: преобразование "_Rep" в "int", возможна потеря данных
+C:\_Edu\Информатика\Лабы\myarray\main.cpp(34,15): warning C4244:         with
+C:\_Edu\Информатика\Лабы\myarray\main.cpp(34,15): warning C4244:         [
+C:\_Edu\Информатика\Лабы\myarray\main.cpp(34,15): warning C4244:             _Rep=__int64
+C:\_Edu\Информатика\Лабы\myarray\main.cpp(34,15): warning C4244:         ]
+  myarray.vcxproj -> C:\_Edu\Информатика\Лабы\myarray\Debug\myarray.exe
