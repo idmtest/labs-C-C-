@@ -16,8 +16,6 @@ x64/
 build/
 /*/[Bb]in/
 [Oo]bj/
-pic/
-CNCDataCollect_updater/
 
 # NuGet Packages
 *.nupkg
@@ -213,20 +211,6 @@ $RECYCLE.BIN/
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 
-#####
-# SS Special case for /bin/* folder
-#####
-!/bin
-/bin/*
-!/bin/deflector_config
-!/bin/filesystem
-!/bin/Help
-!/bin/Parameters and Tables
-!/bin/PLC programs
-!/bin/plc_config
-!/bin/Settings
-!/bin/Test programs
-
 #WinMerge .bak files
 *.bak
 
@@ -306,6 +290,8 @@ dkms.conf
 *.lo
 *.o
 *.obj
+*.vcxproj
+*.vcxpproj.filters
 
 # Precompiled Headers
 *.gch
