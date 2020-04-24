@@ -19,13 +19,15 @@ int main(int argc, char* argv[])
 	cout << "Input count array: ";
 	cin >> count;
 
+	// проверка времени
 	chrono::time_point<chrono::system_clock> start, end;
 	
 	int* arrForSort = new int [count];
 	
 	randArr(arrForSort, count);
 	start = chrono::system_clock::now();
-
+	
+	// printArr
 	printArr(arrForSort, count);
 
 	end = chrono::system_clock::now();
