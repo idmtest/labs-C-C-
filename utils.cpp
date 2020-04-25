@@ -20,6 +20,6 @@ void randArr(int* arr, int count)
 
 void badInitArr(int* arr, int count)
 {
-	for (int i = count; i > 0; i++)
+	for (int i = count; i > 0; i--)
 		*(arr + i) = i;
 }
