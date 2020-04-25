@@ -17,3 +17,9 @@ void randArr(int* arr, int count)
 	for (int i = 0; i < count; i++)
 		*(arr + i) = distribution(gen);
 }
+
+void badInitArr(int* arr, int count)
+{
+	for (int i = count; i > 0; i++)
+		*(arr + i) = i;
+}

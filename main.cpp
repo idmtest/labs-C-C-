@@ -4,7 +4,9 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <chrono>
+#include <array>
 #include "utils.h"
+#include "arraysort.h"
 using namespace std;
 
 void myEndProg()
@@ -19,24 +21,36 @@ int main(int argc, char* argv[])
 	cout << "Input count array: ";
 	cin >> count;
 
-	// проверка времени
+	// for elapsed time
 	chrono::time_point<chrono::system_clock> start, end;
-	
-	int* arrForSort = new int [count];
-	
-	randArr(arrForSort, count);
-	start = chrono::system_clock::now();
-	
-	// printArr
-	printArr(arrForSort, count);
+		
+	int* arrNotSort = new int [count];
+	int* arrForSort = new int[count];
 
+	randArr(arrNotSort, count);	
+	memcpy(arrForSort, arrNotSort, count * sizeof(int));
+	
+	//start = chrono::system_clock::now();
+	//foolSort(arrForSort, count);
+	//end = chrono::system_clock::now();
+	
+	//printArr(arrNotSort, count);
+	//printf("-------------\n");
+	
+	start = chrono::system_clock::now();
+	bubleSort(arrForSort, count);
 	end = chrono::system_clock::now();
+	
+	
+	//printArr(arrForSort, count);
+	
 
 	int workTime = chrono::duration_cast<chrono::milliseconds>(end - start).count();
-	cout << "WorkTime is " << workTime;
+	cout << "\nWorkTime is " << workTime;
 
 	
-	delete []arrForSort;
+	delete []arrNotSort;
+	delete[]arrForSort;
 
 	myEndProg();
 
