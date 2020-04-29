@@ -113,3 +113,9 @@ int bogoSort(int* arr, int size) {
 	end = std::chrono::system_clock::now();
 	return (int)std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 }
+
+int check()
+{
+	int test = dl;
+
+}
