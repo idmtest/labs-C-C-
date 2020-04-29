@@ -27,6 +27,7 @@ int main(int argc, char* argv[])
 		"1- Fool sort\n"
 		"2- Bubble sort\n"
 		"3- Worng bubble sort\n"
+		"4- Monkey sort\n"
 		"Choose methog : \n";
 	cin >> curAlg;
 
@@ -39,15 +40,19 @@ int main(int argc, char* argv[])
 	randArr(arrNotSort, count);
 	memcpy(arrForSort, arrNotSort, count * sizeof(int));
 
+	printArr(arrNotSort, count);
+	printf("-------------\n");
+
 	switch (curAlg)
 	{
 	case 1: workTime = foolSort(arrForSort, count); break;
 	case 2: workTime = bubleSort(arrForSort, count); break;
 	case 3: workTime = wrongBubleSort(arrForSort, count); break;
+	case 4: workTime = bogoSort(arrForSort, count); break;
 	}
 	
 	
-	//printArr(arrNotSort, count);
+	printArr(arrForSort, count);
 	//printf("-------------\n");
 	
 	 
