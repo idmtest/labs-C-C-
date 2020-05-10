@@ -39,19 +39,19 @@ int main(int argc, char* argv[])
 
 	randArr(arrNotSort, count);
 	memcpy(arrForSort, arrNotSort, count * sizeof(int));
-
+	SortFunc pSortFunc = NULL;
 	printArr(arrNotSort, count);
 	printf("-------------\n");
 
 	switch (curAlg)
 	{
-	case 1: workTime = foolSort(arrForSort, count); break;
-	case 2: workTime = bubleSort(arrForSort, count); break;
-	case 3: workTime = wrongBubleSort(arrForSort, count); break;
-	case 4: workTime = bogoSort(arrForSort, count); break;
+	case 1: pSortFunc = foolSort; break;
+	case 2: pSortFunc = bubleSort; break;
+	case 3: pSortFunc = wrongBubleSort; break;
+	case 4: pSortFunc = bogoSort; break;
 	}
 	
-	
+	workTime = pSortFunc(arrForSort, count);
 	printArr(arrForSort, count);
 	//printf("-------------\n");
 	
