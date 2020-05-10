@@ -90,7 +90,6 @@ int bubleSort(int* arr, int count)
 //		tmp = 
 //	return 0;
 //}
-
 int correct(int* arr, int size) {
 	while (size-- > 0)
 		if (arr[size - 1] > arr[size])
