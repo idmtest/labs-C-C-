@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 
 	randArr(arrNotSort, count);
 	memcpy(arrForSort, arrNotSort, count * sizeof(int));
-	SortFunc pSortFunc = NULL;
+	SortFunc pSortFunc = NULL; // указатель на функцию
 	printArr(arrNotSort, count);
 	printf("-------------\n");
 
