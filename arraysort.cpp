@@ -102,6 +102,7 @@ void shuffle(int* arr, int size) {
 		std::swap(arr[i], arr[(rand() % size)]);
 }
 
+// O(N*N!)
 int bogoSort(int* arr, int size) {
 	myTypeTime start, end;
 	start = std::chrono::system_clock::now();
@@ -111,10 +112,4 @@ int bogoSort(int* arr, int size) {
 
 	end = std::chrono::system_clock::now();
 	return (int)std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-}
-
-int check()
-{
-	int test = dl;
-
 }

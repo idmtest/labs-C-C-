@@ -21,8 +21,6 @@ int main(int argc, char* argv[])
 	int workTime = 0;
 	short curAlg = 0;
 
-
-
 	cout << "Available Methods \n"
 		"1- Fool sort\n"
 		"2- Bubble sort\n"
