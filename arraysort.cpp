@@ -1,4 +1,5 @@
 #include "utils.h"
+#include "utils.h"
 
 int foolSort(int* arr, int count) // O(N^2)
 {
@@ -42,7 +43,23 @@ int wrongBubleSort(int* arr, int count)
 	return (int)std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 }
 
-int bubleSort(int* arr, int count)
+int varBoubleSort(int* arr, int count)
+{
+	myTypeTime start, end;
+	start = std::chrono::system_clock::now();
+	for(int i=0; i<count-1;i++)
+	for(int j=i+1; j<count; j++)
+		if (arr[i] > arr[j])
+		{
+			int t = arr[i];
+			arr[i] = arr[j];
+			arr[j] = t;
+		}
+	end = std::chrono::system_clock::now();
+	return (int)std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+}
+
+int bubleSort(int* arr, int count) // O(N^2)
 {
 	myTypeTime start, end;
 	start = std::chrono::system_clock::now();
